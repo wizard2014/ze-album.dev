@@ -67,8 +67,10 @@ class AddAction
             );
         }
 
-        return new HtmlResponse($this->template->render('album::add', [
-            'form' => $this->form,
-        ]));
+        return new HtmlResponse(
+            $this->template->render('album::add', [
+                'form' => $this->form,
+            ])
+        );
     }
 }

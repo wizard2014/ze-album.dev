@@ -45,7 +45,7 @@ class EditAction
      * @param ServerRequestInterface $request
      * @param ResponseInterface      $response
      *
-     * @return HtmlResponse
+     * @return HtmlResponse|RedirectResponse
      */
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response)
     {
