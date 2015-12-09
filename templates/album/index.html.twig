@@ -1,7 +1,41 @@
 {% extends '@layout/default.html.twig' %}
 
-{% block title %}My Albums{% endblock %}
+{% block title %}Albums{% endblock %}
 
 {% block content %}
     <h1>Albums</h1>
+
+    <p><a class="btn btn-raised btn-success" href="{{ path('album.add') }}"><i class="fa fa-plus"></i> Add new</a></p>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for album in albums %}
+            <tr>
+                <td>{{ album.id }}</td>
+                <td>{{ album.title }}</td>
+                <td>{{ album.artist }}</td>
+                <td>
+                    <a href="{{ path('album.edit', {id: album.id}) }}" class="btn btn-raised btn-primary" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil-square-o"></i></a>
+                    <a href="{{ path('album.delete', {id: album.id}) }}" class="btn btn-raised btn-danger" data-toggle="tooltip" data-placement="top" title="Remove"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+            {% else %}
+                <tr>
+                    <td>0</td>
+                    <td>No</td>
+                    <td>Artists</td>
+                    <td>&nbsp;</td>
+                </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}

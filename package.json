@@ -1,0 +1,37 @@
+{
+  "name": "ze-album.dev",
+  "version": "0.0.1",
+  "description": "Album app on Zend Expressive",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wizard2014/ze-album.dev.git"
+  },
+  "keywords": [
+    "Album",
+    "zend",
+    "expressive"
+  ],
+  "author": "wizard2014",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wizard2014/ze-album.dev/issues"
+  },
+  "homepage": "https://github.com/wizard2014/ze-album.dev#readme"
+}

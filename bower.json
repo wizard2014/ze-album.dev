@@ -1,0 +1,23 @@
+{
+  "name": "Album app on Zend Expressive",
+  "homepage": "http://versover.com",
+  "authors": [
+    "wizard2014 <wizard2014@ya.ru>"
+  ],
+  "description": "Album app on Zend Expressive",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "album",
+    "zend",
+    "expressive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
