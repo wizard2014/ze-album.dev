@@ -45,9 +45,7 @@ class AlbumService implements AlbumServiceInterface
         if ($this->form->isValid()) {
             $album = new Album();
 
-            $album->setId($data['id'] ?: null);
-            $album->setArtist($data['artist']);
-            $album->setTitle($data['title']);
+            $album->exchangeArray($data);
 
             if (!$this->repository->save($album)) {
                 throw new \Exception('Unable to save the album');

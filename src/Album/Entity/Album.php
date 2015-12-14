@@ -72,7 +72,7 @@ class Album implements ArraySerializableInterface
      */
     public function exchangeArray(array $array)
     {
-        $this->id       = $array['id'];
+        $this->id       = $array['id'] ?: null;
         $this->artist   = $array['artist'];
         $this->title    = $array['title'];
     }
@@ -82,10 +82,6 @@ class Album implements ArraySerializableInterface
      */
     public function getArrayCopy()
     {
-        return [
-            'id'     => $this->id,
-            'artist' => $this->artist,
-            'title'  => $this->title,
-        ];
+        return get_object_vars($this);
     }
 }
